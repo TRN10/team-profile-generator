@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Inquirer question arrays
+
 // Manager questions
 const managerQuestions = [
     {
@@ -13,17 +14,17 @@ const managerQuestions = [
     {
         type: 'input',
         name: 'managersId',
-        message: "What is your team manager's employee ID?"
+        message: "What is the team manager's employee ID?"
     },
     {
         type: 'input',
         name: 'managerEmail',
-        message: "What is your team manager's email address?"
+        message: "What is the team manager's email address?"
     },
     {
         type: 'input',
         name: 'officeNumber',
-        message: "What is your team manager's office number?",
+        message: "What is the team manager's office number?",
     }
 ];
 
