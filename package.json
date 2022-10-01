@@ -1,0 +1,29 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Coding bootcamp week 10 challenge",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TRN10/team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TRN10/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/TRN10/team-profile-generator#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.1.2",
+    "jest": "^29.1.2"
+  }
+}
