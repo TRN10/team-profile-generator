@@ -1,6 +1,10 @@
 // Import required modules
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Employee = require('./lib/employee');
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
 
 // Inquirer question arrays
 
@@ -29,7 +33,6 @@ const managerQuestions = [
 ];
 
 // Option to add additional team members
-
 const addTeamMembers = [
     {
         type: 'list',
@@ -116,3 +119,4 @@ function internPrompt() {
 // Function call to initialise app
 
 init();
+
