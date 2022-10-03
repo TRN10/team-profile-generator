@@ -14,19 +14,32 @@ const managerQuestions = [
     {
         type: 'input',
         name: 'managersId',
-        message: "What is the team manager's employee ID?"
+        message: "What is the team manager's employee ID?",
     },
     {
         type: 'input',
         name: 'managerEmail',
-        message: "What is the team manager's email address?"
+        message: "What is the team manager's email address?",
     },
     {
         type: 'input',
         name: 'officeNumber',
         message: "What is the team manager's office number?",
-    }
+    },
 ];
+
+// Option to add additional team members
+
+const addTeamMembers = [
+    {
+        type: 'list',
+        name: 'addAdditional',
+        message: 'Would you like to add additional team members?',
+        choices: ['Add Engineer', 'Add Intern', 'Finish building team'],
+    },
+
+]
+
 
 // Engineer questions
 const engineerQuestions = [
@@ -48,7 +61,7 @@ const engineerQuestions = [
     {
         type: 'input',
         name: 'github',
-        message: "What is the engineer's GitHub username?"
+        message: "What is the engineer's GitHub username?",
     }
 ];
 
@@ -72,15 +85,34 @@ const internQuestions = [
     {
         type: 'input',
         name: 'school',
-        message: "What is the name of the intern's school?"
+        message: "What is the name of the intern's school?",
     }
 
 ];
 
+// Function to intialise app
+
 function init() {
-    inquirer.prompt(managerQuestions).then(managerResponses => {
-        const managerAnswers
-    })
+    inquirer.prompt(managerQuestions).then(managerResponses);
+
+    inquirer.prompt(addTeamMembers).then(addTeamResponse);
+
 }
+
+// Function to run inquirer questions to add engineer to team
+
+function engineerPrompt() {
+    inquirer.prompt(engineerQuestions).then(engineerResponses);
+}
+
+
+// Function to run inquirer questions to add intern to team
+
+function internPrompt() {
+    inquirer.prompt(internQuestions).then(internResponses);
+}
+
+
+// Function call to initialise app
 
 init();
