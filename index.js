@@ -76,3 +76,11 @@ const internQuestions = [
     }
 
 ];
+
+function init() {
+    inquirer.prompt(managerQuestions).then(managerResponses => {
+        const managerAnswers
+    })
+}
+
+init();
