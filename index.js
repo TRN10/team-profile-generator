@@ -5,6 +5,7 @@ const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
+const teamMembers = [];
 
 // Inquirer question arrays
 
@@ -96,23 +97,72 @@ const internQuestions = [
 // Function to intialise app
 
 function init() {
-    inquirer.prompt(managerQuestions).then(managerResponses);
+    inquirer.prompt(managerQuestions)
+        .then((managerResponses) => {
+            return inquirer.prompt(addTeamMembers)
+                .then((addTeamResponse) => {
+                    if (true) {
+                        engineerPrompt().then(engineerResponses => {
 
-    inquirer.prompt(addTeamMembers).then(addTeamResponse);
+                        })
+                    }
+
+                    console.log(managerResponses) *
+                        console.log(addTeamResponse)
+                })
+        });
+}
+
+// Function to obtain manager details from inquirer and build manager object using manager class
+
+function managerPrompt() {
+    inquirer.prompt(managerQuestions).then((managerResponses) => {
+        const manager = new Manager(
+            managerResponses.managerName,
+            managerResponses.managersId,
+            managerResponses.managerEmail,
+            managerResponses.officeNumber,
+        )
+        teamMembers.push(manager);
+    })
 
 }
 
-// Function to run inquirer questions to add engineer to team
+function createMemberPrompt() {
+    //which type of user to add using inquirer
+    //if statement to call engineer if chosen
+    //if statement to call intern if chosen
+    // else if no member then call render html
+}
+
+// Function to obtain engineer details from inquirer and build engineer object using engineer class
 
 function engineerPrompt() {
-    inquirer.prompt(engineerQuestions).then(engineerResponses);
+    inquirer.prompt(engineerQuestions).then((engineerResponses) => {
+        const engineer = new Engineer(
+            engineerResponses.engineerName,
+            engineerResponses.engineerId,
+            engineerResponses.engineerEmail,
+            engineerResponses.github,
+        )
+        teamMembers.push(engineer);
+    })
+
 }
 
-
-// Function to run inquirer questions to add intern to team
+// Function to obtain intern details and build intern object
 
 function internPrompt() {
-    inquirer.prompt(internQuestions).then(internResponses);
+    inquirer.prompt(internQuestions).then((internResponses) => {
+        const intern = new Intern(
+            internResponses.internName,
+            internResponses.internId,
+            internResponses.internEmail,
+            internResponses.school,
+        )
+        teamMembers.push(intern);
+    })
+
 }
 
 
