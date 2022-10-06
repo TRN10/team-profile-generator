@@ -96,21 +96,12 @@ const internQuestions = [
 
 // Function to intialise app
 
+
+
 function init() {
-    inquirer.prompt(managerQuestions)
-        .then((managerResponses) => {
-            return inquirer.prompt(addTeamMembers)
-                .then((addTeamResponse) => {
-                    if (true) {
-                        engineerPrompt().then(engineerResponses => {
 
-                        })
-                    }
+    managerPrompt();
 
-                    console.log(managerResponses) *
-                        console.log(addTeamResponse)
-                })
-        });
 }
 
 // Function to obtain manager details from inquirer and build manager object using manager class
@@ -124,15 +115,25 @@ function managerPrompt() {
             managerResponses.officeNumber,
         )
         teamMembers.push(manager);
+        createMemberPrompt();
     })
 
 }
 
+// Function to ask user if they want to add another team member
+
 function createMemberPrompt() {
-    //which type of user to add using inquirer
-    //if statement to call engineer if chosen
-    //if statement to call intern if chosen
-    // else if no member then call render html
+    inquirer.prompt(addTeamMembers).then(({ addAdditional }) => {
+        if (addAdditional === 'Add Engineer') {
+            engineerPrompt();
+        } else if (addAdditional === 'Add Intern') {
+            internPrompt();
+        } else {
+            renderHTML();
+        }
+
+    })
+    //console.log(teamMembers);
 }
 
 // Function to obtain engineer details from inquirer and build engineer object using engineer class
@@ -146,6 +147,7 @@ function engineerPrompt() {
             engineerResponses.github,
         )
         teamMembers.push(engineer);
+        createMemberPrompt();
     })
 
 }
@@ -161,6 +163,7 @@ function internPrompt() {
             internResponses.school,
         )
         teamMembers.push(intern);
+        createMemberPrompt();
     })
 
 }
