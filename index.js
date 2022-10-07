@@ -79,12 +79,12 @@ const internQuestions = [
     {
         type: 'input',
         name: 'internId',
-        message: "What is the engineer's employee ID?",
+        message: "What is the intern's employee ID?",
     },
     {
         type: 'input',
         name: 'internEmail',
-        message: "What is the engineer's email address",
+        message: "What is the intern's email address",
     },
     {
         type: 'input',
