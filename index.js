@@ -115,6 +115,7 @@ function managerPrompt() {
             managerResponses.officeNumber,
         )
         teamMembers.push(manager);
+        //console.log(teamMembers);
         createMemberPrompt();
     })
 
@@ -173,3 +174,4 @@ function internPrompt() {
 
 init();
 
+module.exports = teamMembers;
