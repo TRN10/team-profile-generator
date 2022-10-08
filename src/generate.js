@@ -10,25 +10,25 @@ const generateTeam = (teamMembers) => {
 const generateManager = (Manager) => {
     return `
         <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
-                <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> Manager</div>
-                <div class="card-header bg-dark">
-                    <h4>${Manager.managerName}</h4>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li>ID: ${Manager.managersId}</li>
-                        <li>Email: <a href="mailto:${Manager.managerEmail}">${Manager.managerEmail}</a></li>
-                        <li>Office number: ${manager.officeNumber}</li>
-                    </ul>
-
-                </div>
+            <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> Manager</div>
+            <div class="card-header bg-dark">
+                <h4>${Manager.managerName}</h4>
             </div>
+            <div class="card-body">
+                <ul>
+                    <li>ID: ${Manager.managersId}</li>
+                    <li>Email: <a href="mailto:${Manager.managerEmail}">${Manager.managerEmail}</a></li>
+                    <li>Office number: ${manager.officeNumber}</li>
+                </ul>
+
+            </div>
+        </div>
     `;
 };
 
 const generateEngineer = (Engineer) => {
     return `
-         <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
+        <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
             <div class="card-header bg-success"><i class="fa-solid fa-glasses"></i> Engineer</div>
             <div class="card-header bg-dark">
                 <h4>${Engineer.engineerName}</h4>
@@ -38,7 +38,7 @@ const generateEngineer = (Engineer) => {
                     <li>ID: ${Engineer.engineerId}</li>
                     <li>Email: <a href="mailto:${Engineer.engineerEmail}">${Engineer.engineerEmail}</a></li>
                     <li>Github: <a href="https://github.com/${Engineer.github}" target="_blank" rel="noopener noreferrer">${Engineer.github}</a></li>
-          </ul>
+                </ul>
 
             </div>
         </div>
@@ -49,19 +49,19 @@ const generateEngineer = (Engineer) => {
 const generateIntern = (Intern) => {
     return `
         <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
-                <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> Manager</div>
-                <div class="card-header bg-dark">
-                    <h4>${Intern.internName}</h4>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li>ID: ${Intern.internId}</li>
-                        <li>Email: <a href="mailto:${Intern.internEmail}">${Intern.internEmail}</a></li>
-                        <li>School: ${Intern.school}</li>
-                    </ul>
-
-                </div>
+            <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> Intern</div>
+            <div class="card-header bg-dark">
+                <h4>${Intern.internName}</h4>
             </div>
+            <div class="card-body">
+                <ul>
+                    <li>ID: ${Intern.internId}</li>
+                    <li>Email: <a href="mailto:${Intern.internEmail}">${Intern.internEmail}</a></li>
+                    <li>School: ${Intern.school}</li>
+                </ul>
+
+            </div>
+        </div>
     `;
 };
 
@@ -96,7 +96,7 @@ const generateIntern = (Intern) => {
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-members col-12 d-flex justify-content-center">
                 
             </div>
         </div>
