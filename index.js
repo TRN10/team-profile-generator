@@ -1,11 +1,13 @@
 // Import required modules
 const inquirer = require('inquirer');
-const fs = require('fs');
+
 const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const teamMembers = [];
+let generateTeam = require('./src/generate');
+let teamMembers = [];
+let exportHTML = require('./src/writeHTML.js')
 
 // Inquirer question arrays
 
@@ -130,7 +132,7 @@ function createMemberPrompt() {
         } else if (addAdditional === 'Add Intern') {
             internPrompt();
         } else {
-            renderHTML();
+            exportHTML(teamMembers);
         }
 
     })
