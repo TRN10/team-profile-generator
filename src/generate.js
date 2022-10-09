@@ -10,7 +10,7 @@ const generateTeam = (teamMembers) => {
     const generateManager = (Manager) => {
         return `
         <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
-        <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> <strong>Manager</strong>
+        <div class="card-header bg-primary"><i class="fa-solid fa-mug-hot"></i> <strong>Manager</strong></div>
             <div class="card-header bg-dark">
                 <h4>${Manager.employeeName}</h4>
             </div>
@@ -29,7 +29,7 @@ const generateTeam = (teamMembers) => {
     const generateEngineer = (Engineer) => {
         return `
         <div class="card bg-light mb-3 shadow" style="max-width: 18rem;">
-        <div class="card-header bg-success"><i class="fa-solid fa-glasses"></i> <strong>Engineer</strong>
+        <div class="card-header bg-success"><i class="fa-solid fa-glasses"></i> <strong>Engineer</strong></div>
             <div class="card-header bg-dark">
                 <h4>${Engineer.employeeName}</h4>
             </div>

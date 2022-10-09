@@ -2,8 +2,7 @@ const fs = require('fs');
 let generateTeam = require('./generate');
 
 function exportHTML(teamMembers) {
-    let teamMembersHTML =
-        `
+    let teamMembersHTML = `
 <!doctype html>
 <html lang="en">
 
