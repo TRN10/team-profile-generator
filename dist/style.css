@@ -20,3 +20,9 @@ ul {
 .card {
     margin: 20px;
 }
+
+.bg-primary,
+.bg-success,
+.bg-warning {
+    text-align: center;
+}
