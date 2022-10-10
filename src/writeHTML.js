@@ -1,3 +1,5 @@
+// Function to write index.html using teamMembers html
+
 const fs = require('fs');
 let generateTeam = require('./generate');
 
@@ -24,7 +26,7 @@ function exportHTML(teamMembers) {
     <div class="container fluid">
         <div class="row">
             <div class="col-12 jumbotron jumbotron-fluid bg-danger">
-                <h1 class="display-4">My Team </h1>
+                <h1 class="display-4"><i class="fa-solid fa-people-group"></i> My Team </h1>
             </div>
         </div>
     </div>
