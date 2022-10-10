@@ -17,6 +17,6 @@ ul {
 
 }
 
-/* .card-body {
-    text-align: left;
-} */
+.card {
+    margin: 20px;
+}

@@ -65,7 +65,7 @@ const generateTeam = (teamMembers) => {
 
     let members = teamMembers.map(member => {
         if (member.getRole() === "Manager") {
-            //console.log(member)
+
             return generateManager(member);
         } else if (member.getRole() === "Engineer") {
 
@@ -75,7 +75,7 @@ const generateTeam = (teamMembers) => {
             return generateIntern(member);
         }
     }).join("");
-    //console.log(members)
+
     return members;
 };
 
