@@ -16,3 +16,7 @@ https://github.com/TRN10/team-profile-generator
 
 ##### A screen recording displaying the functionality of the application can be found at:
 https://drive.google.com/file/d/1pU-LtA1MdLzlZ8-4_txJHkUJglxDPk7O/view
+
+##### Below is screenshot showing an example of the generated HTML file:
+
+![my-team-screenshot](assets/my-team-screenshot.png)
